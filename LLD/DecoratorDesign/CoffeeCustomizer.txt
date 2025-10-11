@@ -1,0 +1,26 @@
+🧩 Problem Statement: Coffee Shop Add-ons
+
+You are designing a billing system for a coffee shop.
+The shop sells plain coffee, and customers can add extra items like milk, sugar, and chocolate syrup.
+Each add-on increases the cost and changes the description of the final drink.
+
+Requirements:
+
+You must use the Decorator Design Pattern to add features dynamically.
+
+The base class should represent a Coffee.
+
+Each decorator should:
+
+Wrap around a coffee object.
+
+Add its own cost and description.
+
+
+
+Input:
+Plain Coffee + Milk + Sugar
+
+Output:
+Description: Plain Coffee, Milk, Sugar
+Cost: ₹70
