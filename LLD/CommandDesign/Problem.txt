@@ -1,0 +1,14 @@
+🧠 1. AI Chatbot Command Executor
+
+You’re building an AI assistant that can perform different tasks based on user messages — like:
+
+PlaySongCommand
+
+SendEmailCommand
+
+SetAlarmCommand
+
+OpenAppCommand
+
+Each request (text command) should be converted into a Command object and executed by an AssistantInvoker.
+New commands should be easy to add without changing the invoker’s logic.
