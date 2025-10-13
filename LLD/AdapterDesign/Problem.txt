@@ -1,0 +1,10 @@
+🧩 Problem Statement: Plug Adapter for Media Players
+
+You are designing a media player system that can play MP3 audio files by default.
+Now, your system needs to support additional audio formats like MP4, VLC, and MKV, 
+but you cannot modify the existing MediaPlayer interface 
+(since it’s already being used in production).
+
+To make the system compatible with new formats without changing the existing code, 
+you need to design an Adapter that allows the MediaPlayer interface to play these 
+new formats by internally using AdvancedMediaPlayer implementations.
