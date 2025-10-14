@@ -1,0 +1,2 @@
+Design a system that models a restaurant’s menu hierarchy 
+— where a Menu can contain both MenuItems and sub-Menus.
