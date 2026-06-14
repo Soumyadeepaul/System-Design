@@ -49,7 +49,3 @@ int main() {
 }
 
 
-//g++ main.cpp card.cpp person.cpp personcarddatabase.cpp validator.cpp balancedatabase.cpp transaction.cpp atm.cpp -o main
-
-//deposit
-//transactionlog
