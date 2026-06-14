@@ -1,0 +1,58 @@
+# ATM Machine - Credit Card Based LLD
+
+## Overview
+
+This project implements an object-oriented ATM Machine simulation in C++. The system is designed with **credit card operations** in mind rather than traditional debit bank accounts.
+
+Unlike conventional ATM systems where balances are maintained at the account level, this design models a **credit card ledger system** in which each card maintains an immutable transaction history. The latest transaction stores the current state of the card balance, enabling efficient balance retrieval while preserving a complete audit trail.
+
+## Key Features
+
+* Card validation and PIN verification
+* Deposit and withdrawal operations
+* Balance enquiry
+* Full and mini transaction logs
+* Multiple card types (Gold and Platinum)
+* Transaction history maintained as an append-only ledger
+* Singleton databases for centralized data management
+
+## Design Philosophy
+
+The system follows an **event-sourcing inspired ledger model**:
+
+* Every transaction is immutable.
+* Each transaction stores the balance remaining after execution.
+* Current balance retrieval is performed in **O(1)** time using the latest transaction.
+* Complete transaction history is preserved for auditing and debugging purposes.
+
+## Design Patterns Used
+
+### 1. Template Method Pattern
+
+The ATM defines a fixed workflow for card insertion, validation, transaction processing, and log generation while allowing internal operations to vary.
+
+### 2. Factory Pattern
+
+`TransactionFactory` encapsulates the creation of transaction objects, promoting extensibility and separation of concerns.
+
+### 3. Facade Pattern
+
+The ATM acts as a simplified interface for customers, hiding the complexity of the banking subsystem, validators, and databases.
+
+### 4. Singleton Pattern
+
+`BalanceDatabase` and `PersonCardDatabase` are implemented as singletons to ensure a single source of truth throughout the application.
+
+### 5. Strategy Pattern
+
+Different card types (`GoldCard`, `PlatinumCard`) encapsulate distinct behaviors such as credit limits using polymorphism.
+
+## UML Concepts Demonstrated
+
+* Abstraction
+* Inheritance
+* Polymorphism
+* Association
+* Aggregation
+* Singleton Objects
+* Design Patterns
