@@ -56,3 +56,9 @@ Different card types (`GoldCard`, `PlatinumCard`) encapsulate distinct behaviors
 * Aggregation
 * Singleton Objects
 * Design Patterns
+
+
+
+//g++ main.cpp card.cpp person.cpp personcarddatabase.cpp validator.cpp balancedatabase.cpp transaction.cpp atm.cpp -o main
+
+main
