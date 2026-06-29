@@ -1,1 +1,20 @@
+What if your budget phone could run tasks on your flagship's hardware — over your home Wi-Fi?
 
+That's the idea behind my latest C++ prototype: Distributed Personal Resource Virtualization (DPRV).
+
+The concept is simple:
+→ Low-end devices (phones, tablets) send an Assign packet to a controller (flagship device at your home)
+→ The controller picks a free high-end worker using round-robin + fallback
+→ Both devices get a Connect packet — they now know each other
+→ The client sends a Data packet directly to the worker(high-end device), bypasses the controller
+→ Result comes back. Job done.
+
+No cloud. No subscription. Just your own devices sharing power with each other.
+
+Under the hood I applied 4 design patterns:
+• Template Method — to define the task flow skeleton
+• Strategy — for packet creation steps
+• Command + Bridge — in the controller's receiver logic
+• Round Robin with fallback — for core assignment
+
+Still a prototype, but the architecture holds up. Would love to build this into something real someday.
